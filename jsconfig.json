@@ -1,7 +1,6 @@
 {
-    "typeAcquisition": {
-        "include": [
-            "chrome"
-        ]
-    }
+  "compilerOptions": { "target": "ES6" },
+  "typeAcquisition": {
+    "include": ["chrome"]
+  }
 }
