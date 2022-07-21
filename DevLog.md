@@ -8,3 +8,5 @@
 ## 2022年7月21日
 创建插件图标：16  32 48 128
 <a href="https://www.flaticon.com/free-icons/cube" title="cube icons">Cube icons created by Freepik - Flaticon</a>
+完成了Chrome Getting started案例代码
+
