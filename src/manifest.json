@@ -2,5 +2,9 @@
     "name": "Time Seq",
     "description": "Control The Infomation and Your Life",
     "version": "1.0",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "background":{
+      "service_worker":"background.js"
+    }
+    
   }
