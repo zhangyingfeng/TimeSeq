@@ -1,4 +1,5 @@
 # 学习路径
 这个日志主要记录开发的学习路径，学到的知识，用到的资源
 ## 2022年7月20日
-Chrome开发入门 
+Chrome开发入门，目前是v3版本
+https://developer.chrome.com/docs/extensions/mv3/getstarted/
