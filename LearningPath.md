@@ -49,3 +49,4 @@ VSCode里搜索Image Resizer插件，右键点击图片，resize，输入图片�
 ```
 "compilerOptions": { "target": "ES6" },
 ```
+

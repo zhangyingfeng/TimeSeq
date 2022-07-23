@@ -10,3 +10,6 @@
 <a href="https://www.flaticon.com/free-icons/cube" title="cube icons">Cube icons created by Freepik - Flaticon</a>
 完成了Chrome Getting started案例代码
 
+学习Chrome官方案例water_alarm_notification
+https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification
+

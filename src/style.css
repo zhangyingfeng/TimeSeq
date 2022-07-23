@@ -1,6 +1,9 @@
-button {
+#popup{
+    width: 500px;
+}
+.duration_btn {
     height: 30px;
-    width: 80px;
+    width: 30px;
     margin: 10px;
     border-radius: 3px;
     
@@ -8,4 +11,9 @@ button {
 
 button.current {
     box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+}
+
+input{
+    height: 30px;
+    width: 100px;
 }

@@ -8,6 +8,8 @@
   },
   "options_page": "options.html",
   "permissions": [
+    "alarms",
+    "notifications",
     "storage",
     "activeTab",
     "scripting"
