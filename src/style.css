@@ -17,3 +17,23 @@ input{
     height: 30px;
     width: 100px;
 }
+
+.selected_btn{
+    background-color: #4688f1;
+}
+
+#start_btn,#cancle_btn{
+    color: white;
+}
+#progress_bar{
+    display: none;
+    width: 300px;
+}
+#start_btn{
+    background-color: #3aa757;
+}
+
+#cancle_btn{
+    display: none;
+    background-color: #e8453c;
+}

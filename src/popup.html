@@ -7,19 +7,23 @@
 </head>
 <body>
     <div id="popup">
-        <label for="start_time">开始时间：</label>
-        <input type="time" id="start_time">
+        <!-- <label for="start_time">开始时间：</label>
+        <input type="time" id="start_time"> -->
         <br>
-        <label for="duration">序块时长：</label>
+        <label for="duration">请选择时长：</label>
+        <button class="duration_btn" data-duration="1">1</button>
         <button class="duration_btn" data-duration="5">5</button>
         <button class="duration_btn" data-duration="10">10</button>
         <button class="duration_btn" data-duration="15">15</button>
         <button class="duration_btn" data-duration="20">20</button>
         <button class="duration_btn" data-duration="25">25</button>
         <button class="duration_btn" data-duration="30">30</button>
-        <input type="number" id="duration" placeholder="自定义时长" >
+        <!-- <input type="number" id="duration" placeholder="自定义时长" > -->
         <br>
-        <progress value="70" max="100"></progress>
+        
+        <button id="start_btn">开始</button>
+        <button id="cancle_btn">取消</button>
+        <progress id="progress_bar" value="0" max="0"></progress>
     </div>
 
     <script src="popup.js"></script>

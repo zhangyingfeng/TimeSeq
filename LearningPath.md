@@ -49,4 +49,8 @@ VSCode里搜索Image Resizer插件，右键点击图片，resize，输入图片�
 ```
 "compilerOptions": { "target": "ES6" },
 ```
+## 2022年7月23日
 
+### 如何在同步存储中存放数据？
+
+https://developer.chrome.com/docs/extensions/reference/storage/
