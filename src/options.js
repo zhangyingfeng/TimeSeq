@@ -1,43 +1,56 @@
-const colorOptions = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
+// "use strict";
+
+// const duration = document.getElementById("duration");
+// const add_btn = document.getElementById("add_btn");
+// const duration_list = document.getElementById("duration_list");
+
+// function init() {
+//     chrome.storage.sync.get((data) => {
+//         let durations = data.durations;
+//         // console.log(data)
+//         getDurationList(durations)
+
+//         //添加按钮被点击
+//         add_btn.addEventListener("click", async () => {
+//             //获得同步存储中的时长设定
+//             durations.push(parseInt(duration.value));
+
+//             chrome.storage.sync.set({ durations: durations }, () => {
+//                 duration_list.replaceChildren();
+//                 chrome.storage.sync.get((data) => {
+//                     let durations = data.durations;
+//                     getDurationList(durations)
+//                 });
+//             });
+//         });
+
+        
+//     }); //读取同步存储的回调结束
+// }
+
+// function getDurationList(durations) {
+//     //根据初始化的时长信息显示按钮列表
+//     durations.forEach((duration) => {
+//         // <li>5分钟<button>删除</button></li>
+
+//         let li = document.createElement("li");
+//         li.innerText = duration + "分钟";
+
+//         let btn = document.createElement("button");
+//         btn.innerText = "刪除";
+//         btn.dataset.duration = duration;
+//         btn.addEventListener("click",deleteDutation)
 
 
-//根据颜色库，生成四个不同颜色的按钮，供用户选择
-function createOptionBtn(options) {
-    chrome.storage.sync.get("color", ({color}) => {
-        let currentColor=color
+//         li.appendChild(btn);
 
-        let colorDiv = document.querySelector("#color")
-        options.forEach(colorOption => {
-            let btn = document.createElement("button")
-            btn.style.backgroundColor = colorOption
-            btn.dataset.color=colorOption
-            btn.addEventListener("click", handleColorBtnClick)
-            // if(colorOption===currentColor){
-            //     console.log(colorOption)
-            //     btn.classList.add("current")
-            // }
-            colorOption===currentColor?btn.classList.add("current"):btn.classList.remove("current")
-            colorDiv.appendChild(btn)
-        });
-    })
+//         duration_list.appendChild(li);
+//     }); //时长的forEach循环结束
+// }
 
+// function deleteDutation(event){
+//     event.target.dataset.duration
+// }
 
-}
-
-//点击颜色按钮，修改颜色配置，先移出旧的配置，再加入新的配置
-function handleColorBtnClick(event) {
-    let btn=event.target
-    let newColor=btn.dataset.color
-    console.log(newColor)
-    chrome.storage.sync.set({color:newColor})
-    let prevSelectBtn=document.querySelector(".current")
-    if(prevSelectBtn&&prevSelectBtn!=btn){
-        prevSelectBtn.classList.remove("current")
-        btn.classList.add("current")  
-    }
-    
-    
-}
-
-createOptionBtn(colorOptions);
+// init();
 

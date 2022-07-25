@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
-    
-</head>
-<body>
-    <div id="popup">
-        <!-- <label for="start_time">开始时间：</label>
-        <input type="time" id="start_time"> -->
-        <br>
-        <label for="duration">请选择时长：</label>
-        <button class="duration_btn" data-duration="1">1</button>
-        <button class="duration_btn" data-duration="5">5</button>
-        <button class="duration_btn" data-duration="10">10</button>
-        <button class="duration_btn" data-duration="15">15</button>
-        <button class="duration_btn" data-duration="20">20</button>
-        <button class="duration_btn" data-duration="25">25</button>
-        <button class="duration_btn" data-duration="30">30</button>
-        <!-- <input type="number" id="duration" placeholder="自定义时长" > -->
-        <br>
-        
-        <button id="start_btn">开始</button>
-        <button id="cancle_btn">取消</button>
-        <progress id="progress_bar" value="0" max="0"></progress>
-    </div>
+  </head>
 
+  <body>
+    <div id="popup">
+      <head></head>
+      <main>
+        <fieldset>
+            <legend>请选择时间长度</legend>
+            <div id="duration_div">
+            </div>
+            
+          </fieldset>
+          <div>
+            <button id="start_btn">开始</button>
+            <button id="cancle_btn">取消</button>
+            <progress id="progress_bar" value="0" max="0"></progress>
+          </div>
+      </main>
+    </div>
     <script src="popup.js"></script>
-</body>
+  </body>
 </html>

@@ -1,39 +1,56 @@
-#popup{
-    width: 500px;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+html {
+  height: 530px;
+}
+
+body {
+  width: 350px;
+  height: 530px;
+  background: #ebf3ff;
+}
+
+fieldset {
+  margin: 10px;
+  padding: 10px;
+}
+
 .duration_btn {
-    height: 30px;
-    width: 30px;
-    margin: 10px;
-    border-radius: 3px;
-    
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  border-radius: 3px;
 }
 
 button.current {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px black;
 }
 
-input{
-    height: 30px;
-    width: 100px;
+input {
+  height: 30px;
+  width: 100px;
 }
 
-.selected_btn{
-    background-color: #4688f1;
+.selected_btn {
+  background-color: #4688f1;
 }
 
-#start_btn,#cancle_btn{
-    color: white;
+#start_btn,
+#cancle_btn {
+  color: white;
 }
-#progress_bar{
-    display: none;
-    width: 300px;
+#progress_bar {
+  display: none;
+  width: 100%;
 }
-#start_btn{
-    background-color: #3aa757;
+#start_btn {
+  background-color: #3aa757;
 }
 
-#cancle_btn{
-    display: none;
-    background-color: #e8453c;
+#cancle_btn {
+  display: none;
+  background-color: #e8453c;
 }

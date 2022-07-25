@@ -1,5 +1,12 @@
 'use strict';
-
+//安装时初始化默认设定
+chrome.runtime.onInstalled.addListener(()=>{
+  chrome.storage.sync.set({
+    "start_time":0,
+    "minutes":25,
+    "durations":[1,5,10,15,20,25,30]
+  })
+}) 
 //监听Alarm事件
 chrome.alarms.onAlarm.addListener(() => {
   chrome.action.setBadgeText({ text: '' });
@@ -12,9 +19,6 @@ chrome.alarms.onAlarm.addListener(() => {
       { title: '继续' }
     ],
     priority: 0
-  });
-  chrome.storage.sync.set({
-    "alarm_status": "finished"
   });
 
 });
