@@ -11,7 +11,6 @@ function progressBar(progressBar, start_time, duration) {
     let interval = setInterval(() => {
         let progress = Date.now() - start_time
         progressBar.value = progress;
-
         if (progress > progressBar.max) {
             clearInterval(interval)
             window.close()
@@ -36,7 +35,6 @@ function disableBtn(duration_btn_list) {
 //初始化
 function init() {
     chrome.storage.sync.get(data => {
-        console.log(data)
         const minutes = data.minutes
         const start_time = data.start_time
         const durations = data.durations
@@ -59,17 +57,12 @@ function init() {
                 resetBtnColor(duration_btn_list)
                 btn.classList.add("selected_btn")
 
-                chrome.action.setBadgeText({
-                    "text": duration.toString()
-                });
-
                 //保存时长
                 chrome.storage.sync.set({
                     "minutes": duration
                 });
                 start_btn.style.display = "block";
             })
-            console.log(duration_div)
 
             duration_div.appendChild(btn)
 
@@ -92,10 +85,12 @@ function init() {
     start_btn.addEventListener("click", async () => {
         //获得同步存储中的时长设定
         let item = await chrome.storage.sync.get(['minutes'])
-        console.log(item)
         //根据设定的时长，创建提醒事件
         chrome.alarms.create({
             "delayInMinutes": item.minutes
+        });
+        chrome.action.setBadgeText({
+            "text": item.minutes.toString()
         });
 
         //保存开始时间 
@@ -104,6 +99,11 @@ function init() {
         chrome.storage.sync.set({
             "start_time": start_time,
         });
+
+        chrome.runtime.sendMessage({
+            "minutes":item.minutes,
+            "start_time":start_time
+        })
 
         //控制按钮的显示
         const duration_btn_list = document.querySelectorAll(".duration_btn")
@@ -130,7 +130,13 @@ function init() {
 //执行popup的初始化
 init();
 
+// chrome.management.getAll((result) => {
+//     console.log(result)
+//     result.forEach(item => {
+//         console.log(item.name)
+//     })
 
+// })
 
 
 

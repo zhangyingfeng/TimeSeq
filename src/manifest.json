@@ -1,7 +1,8 @@
 {
   "name": "Time Seq",
-  "description": "Control The Infomation and Your Life",
+  "description": "Time Seq:Control The Infomation and Your Life",
   "version": "1.0",
+  "author": "Yingfeng Zhang 张英锋",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -12,7 +13,8 @@
     "notifications",
     "storage",
     "activeTab",
-    "scripting"
+    "scripting",
+    "management"
   ],
   "action": {
     "default_popup": "popup.html",
